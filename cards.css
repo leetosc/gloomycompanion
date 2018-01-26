@@ -24,8 +24,8 @@
 
     -webkit-box-flex:           1.0;
 
-    width:                      403px;
-    width:                      calc(387px + 1rem); /* 437px == card image width */
+    width:                      271px;
+    width:                      calc(271px + 1rem); /* 437px == card image width */
     max-width:                  147.6vh;
     margin:                     8px;
 }
