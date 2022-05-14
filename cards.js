@@ -1,24 +1,24 @@
 DECKS =
     {   "Ancient Artillery":  {name: "Ancient Artillery", class: "Ancient Artillery"}
-    ,   "Bandit Archer":      {name: "Bandit Archer", class: "Archer"}
-    ,   "Bandit Guard":       {name: "Bandit Guard", class: "Guard"}
-    ,   "Black Imp":          {name: "Black Imp", class: "Imp"}
+    ,   "Bandit Archer":      {name: "Bandit Archer", class: "Bandit Archer"}
+    ,   "Bandit Guard":       {name: "Bandit Guard", class: "Bandit Guard"}
+    ,   "Black Imp":          {name: "Black Imp", class: "Black Imp"}
     ,   "Boss":               {name: "Boss", class: "Boss"}
     ,   "Cave Bear":          {name: "Cave Bear", class: "Cave Bear"}
-    ,   "City Archer":        {name: "City Archer", class: "Archer"}
-    ,   "City Guard":         {name: "City Guard", class: "Guard"}
+    ,   "City Archer":        {name: "City Archer", class: "City Archer"}
+    ,   "City Guard":         {name: "City Guard", class: "City Guard"}
     ,   "Cultist":            {name: "Cultist", class: "Cultist"}
     ,   "Deep Terror":        {name: "Deep Terror", class: "Deep Terror"}
     ,   "Earth Demon":        {name: "Earth Demon", class: "Earth Demon"}
     ,   "Flame Demon":        {name: "Flame Demon", class: "Flame Demon"}
-    ,   "Forest Imp":         {name: "Forest Imp", class: "Imp"}
+    ,   "Forest Imp":         {name: "Forest Imp", class: "Forest Imp"}
     ,   "Frost Demon":        {name: "Frost Demon", class: "Frost Demon"}
     ,   "Giant Viper":        {name: "Giant Viper", class: "Giant Viper"}
     ,   "Harrower Infester":  {name: "Harrower Infester", class: "Harrower Infester"}
     ,   "Hound":              {name: "Hound", class: "Hound"}
-    ,   "Inox Archer":        {name: "Inox Archer", class: "Archer"}
-    ,   "Inox Guard":         {name: "Inox Guard", class: "Guard"}
-    ,   "Inox Shaman":        {name: "Inox Shaman", class: "Shaman"}
+    ,   "Inox Archer":        {name: "Inox Archer", class: "Inox Archer"}
+    ,   "Inox Guard":         {name: "Inox Guard", class: "Inox Guard"}
+    ,   "Inox Shaman":        {name: "Inox Shaman", class: "Inox Shaman"}
     ,   "Living Bones":       {name: "Living Bones", class: "Living Bones"}
     ,   "Living Corpse":      {name: "Living Corpse", class: "Living Corpse"}
     ,   "Living Spirit":      {name: "Living Spirit", class: "Living Spirit"}
@@ -32,7 +32,7 @@ DECKS =
     ,   "Stone Golem":        {name: "Stone Golem", class: "Stone Golem"}
     ,   "Sun Demon":          {name: "Sun Demon", class: "Sun Demon"}
     ,   "Vermling Scout":   {name: "Vermling Scout", class: "Scout"}
-    ,   "Vermling Shaman":    {name: "Vermling Shaman", class: "Shaman"}
+    ,   "Vermling Shaman":    {name: "Vermling Shaman", class: "Vermling Shaman"}
     ,   "Wind Demon":         {name: "Wind Demon", class: "Wind Demon"}
 };
 
@@ -50,7 +50,31 @@ DECK_DEFINITONS =
             , [false, "46", "* %attack% -1 %aoe-triangle-2-side%", "** %range% +0","** %immobilize%"]
             ]
         },
-        { class: "Archer"
+        { class: "Bandit Archer"
+        , cards:
+            [ [false, "16", "* %move% +1", "* %attack% -1", "** %range% +0"]
+            , [false, "31", "* %move% +0", "* %attack% +0", "** %range% +0"]
+            , [false, "32", "* %move% +0", "* %attack% +1", "** %range% -1"]
+            , [false, "44", "* %move% -1", "* %attack% +1", "** %range% +0"]
+            , [false, "56", "* %attack% -1", "** %range% +0", "** %target% 2"]
+            , [true,  "68", "* %attack% +1", "** %range% +1"]
+            , [false, "14", "* %move% -1", "* %attack% -1", , "** %range% +0", "* <span class='small'> Create a 3 damage trap in an adjacent empty hex closest to an enemy </span>"]
+            , [true,  "29", "* %move% +0", "* %attack% -1", "** %range% +1", "** %immobilize%"]
+            ]
+        },
+        { class: "City Archer"
+        , cards:
+            [ [false, "16", "* %move% +1", "* %attack% -1", "** %range% +0"]
+            , [false, "31", "* %move% +0", "* %attack% +0", "** %range% +0"]
+            , [false, "32", "* %move% +0", "* %attack% +1", "** %range% -1"]
+            , [false, "44", "* %move% -1", "* %attack% +1", "** %range% +0"]
+            , [false, "56", "* %attack% -1", "** %range% +0", "** %target% 2"]
+            , [true,  "68", "* %attack% +1", "** %range% +1"]
+            , [false, "14", "* %move% -1", "* %attack% -1", , "** %range% +0", "* <span class='small'> Create a 3 damage trap in an adjacent empty hex closest to an enemy </span>"]
+            , [true,  "29", "* %move% +0", "* %attack% -1", "** %range% +1", "** %immobilize%"]
+            ]
+        },
+        { class: "Inox Archer"
         , cards:
             [ [false, "16", "* %move% +1", "* %attack% -1", "** %range% +0"]
             , [false, "31", "* %move% +0", "* %attack% +0", "** %range% +0"]
@@ -158,7 +182,31 @@ DECK_DEFINITONS =
             , [false, "23", "* %move% -1", "* %attack% -1", "** %immobilize%", "* %attack% -1"]
             ]
         },
-        { class: "Guard"
+        { class: "Bandit Guard"
+        , cards:
+            [ [true,  "15", "* %shield% 1", "* %retaliate% 2"]
+            , [false, "30", "* %move% +1", "* %attack% -1"]
+            , [false, "35", "* %move% -1", "* %attack% +0", "** %range% 2"]
+            , [false, "50", "* %move% +0", "* %attack% +0"]
+            , [false, "50", "* %move% +0", "* %attack% +0"]
+            , [false, "70", "* %move% -1", "* %attack% +1"]
+            , [false, "55", "* %move% -1", "* %attack% +0", "* %strengthen%", "** Self"]
+            , [true , "15", "* %shield% 1", "* %attack% +0", "** %poison%"]
+            ]
+        },
+        { class: "City Guard"
+        , cards:
+            [ [true,  "15", "* %shield% 1", "* %retaliate% 2"]
+            , [false, "30", "* %move% +1", "* %attack% -1"]
+            , [false, "35", "* %move% -1", "* %attack% +0", "** %range% 2"]
+            , [false, "50", "* %move% +0", "* %attack% +0"]
+            , [false, "50", "* %move% +0", "* %attack% +0"]
+            , [false, "70", "* %move% -1", "* %attack% +1"]
+            , [false, "55", "* %move% -1", "* %attack% +0", "* %strengthen%", "** Self"]
+            , [true , "15", "* %shield% 1", "* %attack% +0", "** %poison%"]
+            ]
+        },
+        { class: "Inox Guard"
         , cards:
             [ [true,  "15", "* %shield% 1", "* %retaliate% 2"]
             , [false, "30", "* %move% +1", "* %attack% -1"]
@@ -193,8 +241,20 @@ DECK_DEFINITONS =
             , [false, "83", "* %move% -2", "* %attack% +1"]
             , [false, "72", "* %attack% -1", "** %pierce% 2", "* %move% -2", "* %attack% -1", "** %pierce% 2"]
             ]
-		},
-        { class: "Imp"
+        },
+        { class: "Black Imp"
+        , cards:
+            [ [false, "05", "* %shield% 5", "* %heal% 1", "** Self"]
+            , [false, "37", "* %move% +0", "* %attack% +0","** %range% +0"]
+            , [false, "37", "* %move% +0", "* %attack% +0","** %range% +0"]
+            , [false, "42", "* %move% +1", "* %heal% 2", "** %range% 3"]
+            , [true,  "43", "* %move% +0", "* %attack% -1", "** %range% +0, %target% 2, %poison%"]
+            , [false, "76", "* %move% -1", "* %attack% +1", "** %range% +0",]
+            , [true,  "43", "* %move% +0", "* %attack% -1", "** %range% +0, %target% 2, %curse%"]
+            , [false, "24", "* %strengthen%", "** Affect all allies within %range% 2", "* %muddle%", "** Target all enemies within %range% 2"]
+            ]
+        },
+        { class: "Forest Imp"
         , cards:
             [ [false, "05", "* %shield% 5", "* %heal% 1", "** Self"]
             , [false, "37", "* %move% +0", "* %attack% +0","** %range% +0"]
@@ -326,7 +386,19 @@ DECK_DEFINITONS =
             , [false, "79",  "* %attack% -1", "** %range% 4", "** %target% 2"]
             ]
         },
-        { class: "Shaman"
+        { class: "Inox Shaman"
+        , cards:
+            [ [false, "08", "* %move% +0", "* %attack% -1", "** %range% +0", "** %disarm%"]
+            , [false, "08", "* %move% -1", "* %attack% +0", "** %range% +0", "** %immobilize%"]
+            , [true,  "23", "* %move% +0", "* %heal% 3", "** %range% 3"]
+            , [true,  "23", "* %move% +0", "* %heal% 3", "** %range% 3"]
+            , [false, "62", "* %move% +0", "* %attack% +0", "** %range% +0"]
+            , [false, "74", "* %move% -1", "* %attack% +1","** %range% +0"]
+            , [false, "89", "* %move% -1", "* %heal% 1", "** Affect all adjacent allies", "* %bless%", "** Self"]
+            , [false, "09", "* %move% +1", "* %attack% -1", "** %range% +0, %curse%, %target% 2"]
+            ]
+        },
+        { class: "Vermling Shaman"
         , cards:
             [ [false, "08", "* %move% +0", "* %attack% -1", "** %range% +0", "** %disarm%"]
             , [false, "08", "* %move% -1", "* %attack% +0", "** %range% +0", "** %immobilize%"]
